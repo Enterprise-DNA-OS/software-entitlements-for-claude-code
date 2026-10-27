@@ -1,3 +1,7 @@
+---
+description: "Compliance for the software entitlement desk"
+---
+
 # compliance
 
 Read CLAUDE.md. Read docs/compliance.md. Explain each missing evidence record and its source. Never certify compliance.

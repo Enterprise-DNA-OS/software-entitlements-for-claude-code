@@ -1,3 +1,7 @@
+---
+description: "Maintenance due for the software entitlement desk"
+---
+
 # maintenance-due
 
 Read CLAUDE.md. Keep perpetual access separate from support and upgrade maintenance expiry.

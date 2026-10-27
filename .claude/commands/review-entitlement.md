@@ -1,3 +1,7 @@
+---
+description: "Review entitlement for the software entitlement desk"
+---
+
 # review-entitlement
 
 Read CLAUDE.md. Confirm the signed agreement, owner and external seat count. Observed seats are a baseline. local allocations are additional. Record the review without changing status. Enable only after approval.

@@ -1,3 +1,7 @@
+---
+description: "Help for the software entitlement desk"
+---
+
 # help
 
 Read CLAUDE.md. Read the relevant records first. Use the CLI as the source of truth and report the result plainly.

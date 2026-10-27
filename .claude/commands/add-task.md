@@ -1,3 +1,7 @@
+---
+description: "Add task for the software entitlement desk"
+---
+
 # add-task
 
 Read CLAUDE.md. Read the relevant records first. Use the CLI as the source of truth and report the result plainly.

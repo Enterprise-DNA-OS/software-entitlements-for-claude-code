@@ -1,3 +1,7 @@
+---
+description: "Consume for the software entitlement desk"
+---
+
 # consume
 
 Read CLAUDE.md. Use a unique stable event key. Duplicate matching events are safe to retry. A different event with that key is rejected. This records local usage only.

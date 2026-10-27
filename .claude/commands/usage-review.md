@@ -1,3 +1,7 @@
+---
+description: "Usage review for the software entitlement desk"
+---
+
 # usage-review
 
 Read CLAUDE.md. Review monthly feature budgets against recorded events. No telemetry is collected automatically.

@@ -1,3 +1,7 @@
+---
+description: "Seat review for the software entitlement desk"
+---
+
 # seat-review
 
 Read CLAUDE.md. Compare observed external seats with local allocations. A stale allocation is a review item, not permission to release it.

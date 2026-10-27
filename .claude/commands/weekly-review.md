@@ -1,3 +1,7 @@
+---
+description: "Weekly review for the software entitlement desk"
+---
+
 # weekly-review
 
 Read CLAUDE.md. Run renewals-due, seat-review and attention, then weekly-review. Read the resulting draft and summarize urgent decisions. Never send it.

@@ -1,3 +1,7 @@
+---
+description: "Add product for the software entitlement desk"
+---
+
 # add-product
 
 Read CLAUDE.md. Read the relevant records first. Use the CLI as the source of truth and report the result plainly.

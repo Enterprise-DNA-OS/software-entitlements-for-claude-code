@@ -1,3 +1,7 @@
+---
+description: "Renewals due for the software entitlement desk"
+---
+
 # renewals-due
 
 Read CLAUDE.md. Review subscription expiry and grace status with the named renewal owner. Do not infer renewal acceptance.

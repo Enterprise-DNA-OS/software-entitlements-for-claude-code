@@ -1,3 +1,7 @@
+---
+description: "Allocate for the software entitlement desk"
+---
+
 # allocate
 
 Read CLAUDE.md. Read show first. Record a local allocation only after the operator confirms the device and capacity. This does not activate a customer application.

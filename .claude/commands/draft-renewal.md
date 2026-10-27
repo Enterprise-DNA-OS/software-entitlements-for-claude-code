@@ -1,3 +1,7 @@
+---
+description: "Draft renewal for the software entitlement desk"
+---
+
 # draft-renewal
 
 Read CLAUDE.md. Read show and history for the entitlement first, then draft-renewal <code>. Open the draft and state what evidence is missing. Never invent price or terms.
