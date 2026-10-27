@@ -1,0 +1,3 @@
+Entitlement ID,Customer name,Product name,Offering name,Plan type,Seats,Expiry date,Order reference ID,Status
+EXPORT-101,Harbour Simulation,Simulation Workbench,Simulation Team,Subscription,5,2030-12-31,EXAMPLE-ORDER,Active
+EXPORT-102,Southern Instruments,Diagnostic Designer,Design Perpetual,Perpetual,2,,EXAMPLE-ORDER-2,Active

@@ -1,24 +1,9 @@
-# Why there is no front end
+# Why this desk has no front end
 
-Nalpeiron Zentitle is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+Renewals, allocation reviews, usage budgets and entitlement schedules work as database records and repeatable commands. A person asks their coding agent, reads the evidence and makes the change. HTML reports show the result without a running web service.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+A screen gives customers self-service activation and support staff immediate form entry. A mobile app gives a different experience on a phone, and a vendor licensing runtime verifies applications and manages offline leases. This base supplies none of those experiences. There is no drag and drop, mobile app, automatic telemetry collection or background synchronization. The embedded database works offline on the operator machine, but that does not provide offline enforcement inside customer software.
 
-## What you gain
+Enterprise DNA scopes the interfaces, application connections and operating arrangements in the custom version. The local check-access command is a decision over the records held here. It is not authentication, tamper resistance, copy protection or a signed licence. Do not expose it as an unauthenticated public service.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Nalpeiron Zentitle. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/nalpeiron-zentitle
+The five useful rituals stand alone: renewal triage, seat review, usage review, maintenance review and evidence review. A seller can run those on an export before changing any licensing infrastructure.

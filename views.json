@@ -1,13 +1,51 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Software Entitlements for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Entitlement desk week",
+    "subtitle": "Fictional demo records. Allocation and usage counts are recorded locally.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Renewals",
+        "sql": "select * from v_renewals order by expires_on"
+      },
+      {
+        "title": "Attention",
+        "sql": "select * from v_attention order by due_on,code"
+      }
+    ]
+  },
+  {
+    "name": "seats",
+    "title": "Seats and usage",
+    "sections": [
+      {
+        "title": "Seat allocations",
+        "sql": "select * from v_seats order by code",
+        "columns": [
+          "code",
+          "account",
+          "status",
+          "seats",
+          "used_seats",
+          "available",
+          "observed_seats",
+          "stale_allocations"
+        ]
+      },
+      {
+        "title": "Monthly usage",
+        "sql": "select * from v_usage order by code,feature"
+      }
+    ]
+  },
+  {
+    "name": "evidence",
+    "title": "Evidence review",
+    "sections": [
+      {
+        "title": "Missing or stale evidence",
+        "sql": "select * from v_compliance order by code,issue",
+        "note": "These checks identify missing records. They do not certify legal compliance."
       }
     ]
   }

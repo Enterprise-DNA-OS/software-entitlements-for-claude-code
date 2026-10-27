@@ -1,43 +1,62 @@
-# Software Entitlements for Claude Code: operating instructions
+# Software Entitlements for Claude Code
 
-This file is the brain. Claude Code reads it at the start of every session. It says who this is for, how work gets done, and the one right way to do each recurring job.
+This is a seller's entitlement operations desk: customers, products, licence terms, local allocations, usage budgets and renewal evidence. It is one trusted organisation's database. Production application enforcement is separate integration work.
 
-## Who this is for
+## Working rules
 
-- **Business:** [YOUR BUSINESS]
-- **Operator:** [YOUR NAME], [your role]
-- **What matters most:** [the one or two outcomes you care about]
+Read before writing. Every answer about a record starts with the CLI. Never invent terms or usage. Use codes when names are ambiguous. Mutation actor labels are attribution, not authentication. Never send, delete business records or change customer software from this desk. Drafts stay in drafts/.
 
-Fill this in once. A worker with context knows. A worker without it guesses.
+Use node scripts/entitlements.mjs help for flags. README holds examples. A command accepts --json. Every mutation is transactional and appends an audit record. Import preview rolls back its transaction.
 
-## How to work
+## Recurring work
 
-1. **Take a brief, not a script.** The operator describes the outcome. You run the right command and present the answer.
-2. **Read before you write.** Before drafting anything about a record, read its full history first.
-3. **Plain language.** Short sentences. No filler. Numbers in tables.
-4. **Silent success, loud problems.** No play-by-play. Say what broke and what you did about it.
-5. **Stop at the line.** Anything that sends, deletes, or faces a customer waits for a yes in this session.
-
-## Routing table: one right way for each recurring job
-
-| When the operator asks for... | Use this |
+| Ask | Recipe |
 |---|---|
-| <!-- TODO(author): one row per slash command --> | `/...` |
+| help | /help |
+| accounts | /accounts |
+| products | /products |
+| entitlements | /entitlements |
+| show | /show |
+| renewals due | /renewals-due |
+| seat review | /seat-review |
+| usage review | /usage-review |
+| maintenance due | /maintenance-due |
+| attention | /attention |
+| compliance | /compliance |
+| insights | /insights |
+| history | /history |
+| add account | /add-account |
+| add product | /add-product |
+| add | /add |
+| allocate | /allocate |
+| release | /release |
+| heartbeat | /heartbeat |
+| renew | /renew |
+| disable | /disable |
+| enable | /enable |
+| resize | /resize |
+| maintain | /maintain |
+| grant | /grant |
+| consume | /consume |
+| add task | /add-task |
+| complete task | /complete-task |
+| log | /log |
+| review account | /review-account |
+| review entitlement | /review-entitlement |
+| import | /import |
+| export | /export |
+| weekly review | /weekly-review |
+| draft renewal | /draft-renewal |
+| check access | /check-access |
+| Change a field or rule | /customise |
+| Add a read-only report | /new-view |
 
-If an ask fits nothing here, run the CLI directly (`npm run <cli> -- --help`) and then propose a new command for it.
+## Record boundaries
 
-## Hard rules
+No secret keys, activation codes, personal fingerprints or payment credentials. Store opaque device references and agreement references. Imported source rows stay pending until an operator reconciles observed seats and agreement evidence. Do not count a device in both the external baseline and local allocations.
 
-- Never send email or messages from here. Draft to `drafts/`, a person sends.
-- Never delete records without an explicit yes in this session. Prefer marking closed or archived.
-- Never invent a record. If a name is ambiguous, list the candidates and ask.
-- The database is the source of truth. If the answer is not in it, say so.
+Take a protected backup before changing a real database. Tests set isolated storage and never use DATABASE_URL unless TEST_DATABASE_URL explicitly names a disposable database. Do not seed a real business register.
 
-## Where things live
+Read docs/compliance.md for the sources and limits of evidence checks. Read docs/replace-nalpeiron-zentitle.md before any import.
 
-- `scripts/` the CLI. `scripts/lib/db.mjs` picks `DATABASE_URL` (Postgres, Supabase) or the embedded database in `.data/`.
-- `supabase/migrations/` the schema, plain SQL. `npm run migrate` applies it.
-- `.claude/commands/` the slash commands. Add one every time the same ask comes twice.
-- `docs/` the thesis and the guide for moving off Nalpeiron Zentitle.
-
-Built by Enterprise DNA. Installed and run for you as part of Omni: https://enterprisedna.co/omni/instead-of/nalpeiron-zentitle
+Built by Enterprise DNA. [Omni by Enterprise DNA](https://enterprisedna.co/omni/book?offer=replace-software&utm_campaign=nalpeiron-zentitle) installs, customises and runs the system.

@@ -1,11 +1,59 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "entitlement-schedule",
+    "title": "Entitlement schedule",
+    "for_each": "select id,code from entitlements order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Recorded licence terms",
+        "layout": "record",
+        "sql": "select code,account,product,offering,plan_type,status,seats,observed_seats,expires_on,grace_days,maintenance_until,contract_ref,renewal_owner from v_entitlements where id=$1",
+        "note": "Internal record, not a signed licence or activation credential."
+      },
+      {
+        "title": "Feature allowances",
+        "sql": "select feature,monthly_limit from feature_grants where entitlement_id=$1 order by feature"
+      },
+      {
+        "title": "Recorded allocations",
+        "sql": "select code,device_ref,last_seen_on,released_on from allocations where entitlement_id=$1 order by code"
+      }
+    ]
+  },
+  {
+    "name": "renewal-brief",
+    "title": "Renewal evidence brief",
+    "for_each": "select id,code from v_entitlements where plan_type='subscription' and expires_on<=current_date+60",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Renewal",
+        "layout": "record",
+        "sql": "select code,account,product,status,expires_on,contract_ref,renewal_owner from v_entitlements where id=$1",
+        "note": "Draft for internal approval. No commercial offer or automatic renewal."
+      },
+      {
+        "title": "Outstanding work",
+        "sql": "select code,title,owner,due_on from tasks where entitlement_id=$1 and closed_on is null order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "account-review",
+    "title": "Account retention review",
+    "for_each": "select id,code from accounts",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Purpose and safeguards",
+        "layout": "record",
+        "sql": "select code,name,owner,purpose,retention_review_on,security_review_on from accounts where id=$1"
+      },
+      {
+        "title": "Entitlements held",
+        "sql": "select code,product,offering,status from v_entitlements where account_id=$1 order by code"
+      }
     ]
   }
 ]
