@@ -12,3 +12,7 @@
 - Landing page preview: HTTP 200, noindex,nofollow, all three offers and the attributed booking link checked. Desktop and mobile screenshots inspected. Read-only seat and usage report inspected.
 
 The committed workflow checks Windows and Linux on Node 20 and 22, plus Postgres 17. Local results above do not claim a Windows run. No customer system or private vendor export was used. Import fixtures are synthetic and match documented report field names. Product enforcement integration is not part of these tests.
+
+[Hosted verification run](https://github.com/Enterprise-DNA-OS/software-entitlements-for-claude-code/actions/runs/40441115808) could not start any test step. GitHub reported failed account payments or a spending limit. Windows and hosted Node 20 therefore remain unverified. No billing settings were changed. The local PGlite and PostgreSQL results above are completed tests, including concurrent allocation and duplicate release checks on PostgreSQL.
+
+Private repository main was pushed. Landing Pages commit af0fc31b was pushed with the draft page. The rendered local page passed the noindex and booking checks. The public draft URL returned HTTP 404 at the final deployment check, so host deployment is not claimed. Publication is left to the runner.
